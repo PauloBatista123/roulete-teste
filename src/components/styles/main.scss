@@ -1,0 +1,193 @@
+.main-area {
+  background-color: #FFEBD4;
+  padding-top: 75px;
+  overflow: hidden;
+
+  .game-area {
+    background-color: #FFEBD4;
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    height: calc(100vh - 100px);
+
+    .gamebar {
+      width: calc(100% - 300px);
+      height: 100%;
+
+      .gamebar-container {
+        height: 100%;
+        margin: auto;
+        margin-top: 40px;
+        position: relative;
+
+        span.marker {
+          position: absolute;
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .temp {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .wheel {
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+            border: 15px solid #FFEBD4;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            position: relative;
+            overflow: hidden;
+            transition: 5s;
+            border-radius: 50%;
+
+            .s1 {
+              height: 100%;
+              width: 205px;
+              position: absolute;
+              clip-path: polygon(100% 0, 50% 100%, 0 0);
+              transform: translateX(-50%);
+              transform-origin: bottom;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              font-weight: bold;
+              font-family: sans-serif;
+              left: 268px;
+              font-size: 20px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar {
+      width: 300px;
+      background-color: #213743;
+      height: 100%;
+      position: relative;
+
+      .main-control {
+        padding: 15px;
+
+        .control {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+
+          .auto-menu {
+            background-color: #0f212e;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+
+            .btn {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 100%;
+              padding: 5px;
+              
+              button.active {
+                background-color: #213743;
+              }
+
+              button {
+                color: #fff;
+                padding: 12px;
+                border-radius: 100px;
+                width: 50%;
+                font-weight: 600;
+                background-color: #0f212e;
+                border: none;
+                outline: none;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .form {
+          .form-group {
+            margin-top: 8px;
+            
+            .label {
+              font-size: 600;
+              color: #fff;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            button.bet {
+              height: 45px;
+              background-color: #00e701;
+              margin-top: 10px;
+              width: 100%;
+              font-weight: 600;
+              color: #fff;
+              border-radius: 3px;
+              border: none;
+              cursor: pointer;
+            }
+
+            .input-group {
+              height: 40px;
+              background-color: #294250;
+              box-shadow: 0 1px 3px 0 rgba(0,0,0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+              margin: 4px 0px;
+              justify-content: space-between;
+              display: flex;
+              align-items: center;
+              border-radius: 3px;
+
+              select, input {
+                width: 98%;
+                background-color: #0f212e;
+                margin: 3px 0px 3px 3px;
+                height: 35px;
+                outline: none;
+                color: #fff;
+                padding: 5px 10px;
+                border: none;
+              }
+              input {
+                
+              }
+
+              .multi {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                width: calc(100% - 55%);
+                
+                button {
+                  width: 100%;
+                  height: 100%;
+                  color: #fff;
+                  background-color: transparent;
+                  border:none;
+                  outline: none;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: #304452;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
